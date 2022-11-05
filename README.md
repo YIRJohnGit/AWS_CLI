@@ -35,7 +35,16 @@ aws EC2 describe-security-groups --group-ids sg-029e9b21073e3be13
 _The Result View_
 ![image](https://user-images.githubusercontent.com/111234771/200139671-443b3ab1-8284-4442-9e5a-e4cd229dddd0.png)
 
-### ...for Create EC2 Instance - Part 3 ###
+### ...for Create Key Pair - Part 3 ###
+```
+aws ec2 create-key-pair --key-name yirkeypair --query 'KeyPairMaterial' --output text > yirkeypair.pem
+chmod 400 yirkeypair.pem
+aws ec2 describe-key-pairs --key-names yirkeypair
+```
+_The Result View_
+![Uploading image.png…]()
+
+### ...for Create EC2 Instance - Part 4 ###
 ```
 ec2 run-instances --image-id ami-09d3b3274b6c5d4aa --count 1 --instance-type t2.micro --key-name yir_ec2_key_pair --security-group-ids <Provide the Security Group from the screen created using sg group> --subnet-id subnet-3e88b144
 ```
