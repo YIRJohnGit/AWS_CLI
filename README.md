@@ -57,5 +57,7 @@ aws ec2 delete-key-pair --key-name yirkeypair
 ***Note:*** Follow KeyPair Creation (Part 3) and Security Group (Part2)
 ![image](https://user-images.githubusercontent.com/111234771/200141291-efdf8468-01b8-412d-b9ef-2267c1099b37.png)
 ```
-aws ec2 run-instances --image-id ami-09d3b3274b6c5d4aa --count 1 --instance-type t2.micro --key-name yirkeypair --security-group-ids sg-0432b7a4a3b80bb87 --subnet-id subnet-3e88b144
+aws ec2 run-instances --image-id ami-09d3b3274b6c5d4aa --count 1 --instance-type t2.micro --key-name yirkeypair --security-group-ids sg-0432b7a4a3b80bb87 --subnet-id subnet-0f2a848f31da8feb8
 ```
+_The Result View_ ***Note: subnet id need to collect***
+![image](https://user-images.githubusercontent.com/111234771/200141388-c1697df6-1ab6-4129-ba05-0863288be388.png)
