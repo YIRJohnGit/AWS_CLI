@@ -42,7 +42,7 @@ chmod 400 yirkeypair.pem
 aws ec2 describe-key-pairs --key-names yirkeypair
 ```
 _The Result View_
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/111234771/200140657-a6820751-5985-4b60-82b2-6c9335b31b06.png)
 
 ### ...for Create EC2 Instance - Part 4 ###
 ```
