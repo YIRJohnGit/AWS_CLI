@@ -30,11 +30,15 @@ _The Result View_
 
 _Get More Details about the Security Group_
 ```
-aws EC2 describe-security-groups --group-ids sg-029e9b21073e3be13
+aws ec2 describe-security-groups --group-ids sg-029e9b21073e3be13
 ```
 _The Result View_
 ![image](https://user-images.githubusercontent.com/111234771/200139671-443b3ab1-8284-4442-9e5a-e4cd229dddd0.png)
 
+***...For Deleting Security Group***
+```
+aws ec2 delete-security-group --group-id sg-029e9b21073e3be13
+```
 ### ...for Create Key Pair - Part 3 ###
 ```
 aws ec2 create-key-pair --key-name yirkeypair --query 'KeyPairMaterial' --output text > yirkeypair.pem
@@ -43,6 +47,11 @@ aws ec2 describe-key-pairs --key-names yirkeypair
 ```
 _The Result View_
 ![image](https://user-images.githubusercontent.com/111234771/200140657-a6820751-5985-4b60-82b2-6c9335b31b06.png)
+
+***...For Deleting***
+```
+aws ec2 delete-key-pair --key-name yirkeypair
+```
 
 ### ...for Create EC2 Instance - Part 4 ###
 ```
